@@ -1,5 +1,5 @@
 #####################################
-#          ESPROM TESTER            #
+#           IMU TESTER              #
 #####################################
 
 
@@ -24,10 +24,10 @@ while True:
     if devices_count == 112: # 16 reserves addresses
         print('Looks like the I2C bus pull-up resistors are missing')
         
-        else:
-            for i in range(devices_count):
-                print('Device found at address: 0x%02X' % devices_identified[i])
-                
-                print() # blank line before next scan
-                
-                sleep(1)
+    else:
+        for i in range(devices_count):
+            print('Device found at address: 0x%02X' % devices_identified[i])
+            
+            print() # blank line before next scan
+            
+            sleep(1)
