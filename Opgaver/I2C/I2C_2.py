@@ -5,7 +5,7 @@ from time import sleep_ms
 
 eeprom_i2c_addr = 0x50
 
-eeprom_mem_address =  # Insert address value
+eeprom_mem_address = 0x51 # Insert address value
 
 # OBJECTS + VARIABLES
 
@@ -30,7 +30,7 @@ def read_byte(i2cAddr, addr):
 
 print('EEPROM test program\n')
 
-write_byte(eeprom_i2c_addr, eeprom_mem_address, indsæt-en-værdi-her) # inser value
+write_byte(eeprom_i2c_addr, eeprom_mem_address, fuck) # inser value, man kan gemme op til 8 bits, dvs værdier fra 0-255
 
 value = read_byte(eeprom_i2c_addr, eeprom_mem_address)
 print(value)
