@@ -43,9 +43,9 @@ def col_str():
         set_color_2((color[0] // 2), (color[1] // 2), (color[2] // 2))
         
     elif mqtt.besked == '75':
-        c1 = int(float(color[0]) // 1.3)
-        c2 = int(float(color[1]) // 1.3)
-        c3 = int(float(color[2]) // 1.3)
+        c1 = int(float(color[0]) // 1.33)
+        c2 = int(float(color[1]) // 1.33)
+        c3 = int(float(color[2]) // 1.33)
         set_color_2(c1, c2, c3)
 
 # hex til RGB func
@@ -82,9 +82,9 @@ while True:
             set_color_2((color[0] // 2), (color[1] // 2), (color[2] // 2))
         
         elif mqtt.besked == '75':
-            c1 = int(float(color[0]) // 1.3)
-            c2 = int(float(color[1]) // 1.3)
-            c3 = int(float(color[2]) // 1.3)
+            c1 = int(float(color[0]) // 1.33)
+            c2 = int(float(color[1]) // 1.33)
+            c3 = int(float(color[2]) // 1.33)
             set_color_2(c1, c2, c3)
         
         elif mqtt.besked == '100':
