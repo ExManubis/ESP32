@@ -31,7 +31,7 @@ def get_adafruit_gps():
             # returnerer data med adafruit gps format
             return speed + "," + lat + "," + lon + "," + "0.0"
         else: # hvis ikke både hastighed, latitude og longtitude er korrekte 
-            print("waiting for GPS data - move GPS to place with access to the sky...")
+            print("waiting for GPS data - move GPS to place with access to the sky...") # print opgave.
             return False
     else:
         return False
@@ -65,7 +65,7 @@ while True:
         gps_data = get_adafruit_gps()
         if gps_data: # hvis der er korrekt data så send til adafruit
             print(f'\ngps_data er: {gps_data}')
-            mqtt.web_print(gps_data, 'mikjorgensen/feeds/speed/csv')                
+            mqtt.web_print(gps_data, 'mikjorgensen/feeds/mapfeed/csv') # HUSK at ændre feed navn                
         #For at sende beskeder til andre feeds kan det gøres sådan:
         # mqtt.web_print("Besked til anden feed", DIT_ADAFRUIT_USERNAME/feeds/DIT_ANDET_FEED_NAVN/ )
         #Indsæt eget username og feednavn til så det svarer til dit eget username og feed du har oprettet
